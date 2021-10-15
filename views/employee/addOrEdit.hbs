@@ -1,0 +1,131 @@
+{{!-- <h3>{{viewTitle}}</h3> --}}
+<div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Agenda de Clientes</h4>
+                  <p class="card-category">Insertar un Cliente</p>
+                </div>
+                <div class="card-body">
+                    
+<form action="/employee" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{employee._id}}">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Nombre de la Empresa</label>
+                          <input type="text" class="form-control" name="empresa" value="{{employee.empresa}}">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Nombre de Persona</label>
+                          <input type="text" class="form-control" name="persona" value="{{employee.persona}}">
+                        </div>
+                      </div>
+                      </div>
+
+                      <div class="row">
+
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Puesto</label>
+                          <input type="text" class="form-control" name="puesto" value="{{employee.puesto}}">
+                        </div>
+                      </div>
+                    
+                    
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Telefono</label>
+                          <input type="text" class="form-control" name="telefono" value="{{employee.telefono}}">
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Correo Electronico</label>
+                          <input type="email" class="form-control" name="correo" value="{{employee.correo}}">
+                        </div>
+                      </div>
+                    </div>
+                   <input type="hidden" name="date" value="{{employee.date}}">
+                    <button type="submit" class="btn btn-primary pull-right">Insertar Cliente</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-profile">
+                <div class="card-avatar">
+                  <a href="#pablo">
+<img class="img" src="{{user.image}}" alt="" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h6 class="card-category">Empleado</h6>
+                  <h4 class="card-title">{{user.displayName}}</h4>                  <p class="card-description">
+                      Nuestro negocio es hacer crecer tu negocio                  </p>
+                  <a href="/auth/logout" class="btn btn-primary btn-round">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+{{!-- 
+<form action="/employee" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group">
+                    <label>Empresa</label>
+            <input type="text" class="form-control" name="empresa"  value="{{employee.empresa}}">
+
+        
+    </div>
+  
+    <div class="form-row">
+        
+        
+        <div class="form-group col-md-6">
+            <label>Persona</label>
+        <input type="text" class="form-control" name="persona"  value="{{employee.persona}}">
+        <div class="text-danger">
+            {{employee.num_pacienteError}}</div>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>Puesto</label>
+            <input type="text" class="form-control" name="puesto"  value="{{employee.puesto}}">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>Telefono</label>
+            <input type="text" class="form-control" name="telefono"  value="{{employee.telefono}}">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>Correo</label>
+            <input type="text" class="form-control" name="correo"  value="{{employee.correo}}">
+        </div>
+
+         <div class="form-group col-md-6">
+            <input type="hidden" class="form-control" name="date" placeholder="Fecha de registro" value="{{employee.date}}">
+        </div>
+
+
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/employee/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
+ --}}

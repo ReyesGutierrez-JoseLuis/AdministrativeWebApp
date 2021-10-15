@@ -1,0 +1,118 @@
+ <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title ">Agenda de Clientes</h4>
+                  <p class="card-category"> Ver Todos los Clientes</p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    
+
+
+
+
+<table class="table">
+                      <thead class=" text-primary">
+                        <th>
+                          Empresa
+                        </th>
+                        <th>
+                          Persona
+                        </th>
+                        <th>
+                          Puesto
+                        </th>
+                        <th>
+                          Telefono
+                        </th>
+                        <th>
+                          Correo
+                        </th>
+                        <th>
+                          Fecha
+                        </th>
+                      </thead>
+                      <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.empresa}}</td>
+            <td>{{this.persona}}</td>
+            <td>{{this.puesto}}</td>
+            <td>{{this.telefono}}</td>
+            <td>{{this.correo}}</td>
+            <td>{{formatDate this.createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+            
+            <td>
+                <a href="/employee/{{this._id}}"><i class="material-icons" aria-hidden="true">edit</i></a>
+                <a href="/employee/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="material-icons" aria-hidden="true">delete</i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+                    </table>
+
+
+
+
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- 
+<h3><a class="btn btn-secondary" href="/employee"><i class="fa fa-plus"></i> Create New</a> Lista De Pacientes</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Telefono</th>
+            <th>Direccion</th>
+            <th>Contacto</th>
+            <th>Numero de Contacto</th>
+             <th>Fecha</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.nombre}}</td>
+            <td>{{this.persona}}</td>
+            <td>{{this.puesto}}</td>
+            <td>{{this.telefono}}</td>
+            <td>{{this.correo}}</td>
+            <td>{{this.date}}</td>
+            
+            <td>
+                <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/employee/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table> --}}

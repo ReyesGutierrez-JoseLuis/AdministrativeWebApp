@@ -1,0 +1,80 @@
+ <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title ">Notas</h4>
+                  <p class="card-category"> Todas las notas</p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    
+<table class="table">
+                      <thead class=" text-primary">
+                        <th>
+                          Titulo
+                        </th>
+                        <th>
+                          Nota
+                        </th>
+                        
+                        <th>
+                          Fecha
+                        </th>
+                      </thead>
+                      <tbody>
+        {{#each list}}
+        <tr>
+             <td>{{this.titulo}}</td>
+            <td>{{this.nota}}</td>
+            <td>{{formatDate this.createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+            
+            <td>
+                <a href="/nota/{{this._id}}"><i class="material-icons" aria-hidden="true">edit</i></a>
+                <a href="/nota/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="material-icons" aria-hidden="true">delete</i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+                    </table>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+
+
+{{!-- 
+<h3><a class="btn btn-secondary" href="/contacto"><i class="fa fa-plus"></i> Create New</a> Lista De Contactos</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>Ocupacion</th>
+            <th>Correo Electronico</th>
+             <th>Fecha de Creacion</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.nombre}}</td>
+            <td>{{this.telefono}}</td>
+            <td>{{this.ocupacion}}</td>
+            <td>{{this.correo}}</td>
+            <td>{{this.date}}</td>
+            
+            <td>
+                <a href="/contacto/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/contacto/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table> --}}
