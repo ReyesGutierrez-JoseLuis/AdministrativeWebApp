@@ -6,6 +6,8 @@ module.exports = {
       res.redirect('/')
     }
   },
+  
+  
   ensureGuest: function (req, res, next) {
     if (req.isAuthenticated()) {
       res.redirect('/employee')
