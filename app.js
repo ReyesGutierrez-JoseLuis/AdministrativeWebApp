@@ -112,10 +112,12 @@ app.use("/", require("./routes/index"));
 app.use("/auth", require("./routes/auth"));
 app.use("/stories", require("./routes/stories"));
 
+
 app.use("/contacto", contactoController);
 app.use("/employee", employeeController);
 app.use("/cita", citaController);
 app.use("/nota", notaController);
+
 
 const PORT = process.env.PORT || 5000;
 dogapi.initialize(options);
